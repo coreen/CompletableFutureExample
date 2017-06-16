@@ -24,6 +24,7 @@ public class Pizza {
 	 */
 	public Pizza(Map<String, Integer> toppings) {
 		this.toppings = toppings;
+		this.cooked = CookedLevel.UNDERCOOKED;
 	}
 	
 	/**
@@ -97,5 +98,12 @@ public class Pizza {
 	 */
 	public int getSlices() {
 		return slices;
+	}
+	
+	@Override
+	public String toString() {
+		return "Pizza[toppings=" + toppings.toString() +
+				",cooked=" + cooked + ",eaten=" + eaten +
+				",slices=" + slices +"]";
 	}
 }
