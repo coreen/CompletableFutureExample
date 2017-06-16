@@ -32,9 +32,16 @@ public class Pizza {
 	 * 
 	 * @param topping
 	 * @param count
+	 * @return pizza
 	 */
-	public void addTopping(String topping, int count) {
-		toppings.put(topping, count);
+	public Pizza addTopping(String topping, int count) {
+		if (toppings.containsKey(topping)) {
+			int oldCount = toppings.get(topping);
+			toppings.put(topping, oldCount + count);
+		} else {
+			toppings.put(topping, count);
+		}
+		return this;
 	}
 	
 	/**
