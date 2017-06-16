@@ -5,7 +5,7 @@ import model.Action;
 import model.Pizza;
 
 /**
- * Combining multiple CompletableFutures together.
+ * Combining multiple dependent CompletableFutures together.
  * 
  * @author Coreen Yuen
  */

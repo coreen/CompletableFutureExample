@@ -35,12 +35,16 @@ public class Pizza {
 	 * @return pizza
 	 */
 	public Pizza addTopping(String topping, int count) {
+		System.out.print("before add topping " + topping);
 		if (toppings.containsKey(topping)) {
 			int oldCount = toppings.get(topping);
+			System.out.println(", existing count = " + oldCount);
 			toppings.put(topping, oldCount + count);
 		} else {
+			System.out.println(", new topping");
 			toppings.put(topping, count);
 		}
+		System.out.println("after add topping: " + toppings.toString());
 		return this;
 	}
 	
