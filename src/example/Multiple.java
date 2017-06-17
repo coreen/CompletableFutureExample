@@ -1,6 +1,7 @@
 package example;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.Random;
 import model.Action;
 import model.Pizza;
 
@@ -10,6 +11,8 @@ import model.Pizza;
  * @author Coreen Yuen
  */
 public class Multiple {
+	private static Random random = new Random();
+
 	public static void main(String[] args) {
 		/*
 		 * .thenCombineAsync() takes 2 successful CompletionStages:
@@ -50,7 +53,7 @@ public class Multiple {
 	private static int setTable() {
 		try {
 			Thread.sleep(3000L); // 3 sec
-			return (int) Math.random() * 100;
+			return random.nextInt(25); // 25 tables in restaurant
 		} catch(InterruptedException e) {
 			throw new RuntimeException(e);
 		}
