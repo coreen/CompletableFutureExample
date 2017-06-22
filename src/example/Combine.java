@@ -10,7 +10,7 @@ import model.Pizza;
  * 
  * @author Coreen Yuen
  */
-public class Multiple {
+public class Combine {
 	private static Random random = new Random();
 
 	public static void main(String[] args) {

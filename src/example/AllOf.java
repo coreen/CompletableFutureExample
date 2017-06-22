@@ -2,7 +2,7 @@ package example;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ApplyAll {
+public class AllOf {
 	public static void main(String[] args) {
 		// 1. Define the steps to set a table.
 		CompletableFuture[] steps = new CompletableFuture[] {
